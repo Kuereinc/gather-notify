@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Kuere, Inc",
+  "version": "0.1.1",
+  "description": "Gatherに入ると自動的にslackに通知する",
+  "action": {
+    "default_popup": "./popup.html",
+    "default_icon": "icon.jpg"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://app.gather.town/app/oK9Y6Fzo2He6uhXO/Kuere",
+        "https://gather.town/app/oK9Y6Fzo2He6uhXO/Kuere"
+      ],
+      "js": ["content_script.js"]
+    }
+  ],
+  "permissions": ["tabs", "clipboardRead", "clipboardWrite"],
+  "icons": {
+    "128": "icon.jpg"
+  }
+}
